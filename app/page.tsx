@@ -1,95 +1,53 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+'use client';
+
+import { motion, AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
+import Loading from './_components/Loading';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main>
+      <Loading />
+      <div className="presentation">
+        {/*  <span>
+          Baloo Studio vous accompagne dans la création de site web en vous
+          offrant des solutions personnalisées et créatives pour répondre à vos
+          besoins spécifiques. Composé d'un graphiste et d'une développeuse web,
+          notre équipe travaille en étroite collaboration avec vous pour donner
+          vie à votre vision. Nous accordons une grande importance à
+          l'expérience utilisateur, à la performance du site et à son adaptation
+          à tous les appareils.
+        </span> */}
+        {/*  <span>
+          <h1 className="one">De quoi avez </h1>
+          <h1 className="two"> vous besoin ?</h1>
+        </span> */}
+        <div className="call">De quoi avez vous besoin ?</div>
+      </div>
+      <div className="options">
+        <div className="simple">
+          <div className="grid-title">
+            <motion.div className="main-title">UN SITE SIMPLE,</motion.div>
+            <div className="description">
+              Un site wordpress facile à construire et modifiable infiniment.
+              Vous avez besoin d'un site facile à mettre en place ? C'est pour
+              vous !
+            </div>
+            <div className="secondary-title">élégant</div>
+          </div>
+        </div>
+        <div className="perso">
+          <div className="grid-title">
+            <div className="main-title">UN SITE SUR-</div>
+            <div className="description">
+              Un site créé de bout en bout par Baloo Studio qui mettra en valeur
+              votre activité. Vous voulez un site esthétique et personnelle ?
+              N'hésitez plus !
+            </div>
+            <div className="secondary-title">mesure</div>
+          </div>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
     </main>
-  )
+  );
 }
