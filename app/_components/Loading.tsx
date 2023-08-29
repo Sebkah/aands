@@ -23,13 +23,7 @@ export default function Loading({}): React.JSX.Element {
             viewBox="0 0 536.83 200.11"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <motion.g
-              style={{
-                stroke: 'blue',
-                fill: 'none',
-                strokeWidth: 4,
-              }}
-            >
+            <motion.g className="svg">
               <motion.path
                 initial={{
                   pathLength: 0,

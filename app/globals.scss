@@ -12,13 +12,20 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  --primary-color: rgb(15, 42, 218);
+  --primary-color: rgb(255, 37, 37);
+  --primary-color: rgb(46, 86, 219);
+  --primary-color: rgba(46, 86, 219, 0);
   --secondary-color: rgb(119, 208, 149);
+  /*   --secondary-color: rgb(180, 168, 113); */
+  --secondary-color: var(--primary-color);
+
+  --text-color: white;
 }
 
 html,
@@ -40,24 +47,15 @@ main {
   height: 100vh;
   place-items: center;
 }
+.svg {
+  stroke: var(--primary-color);
+  stroke-width: 7px;
+  fill: none;
+}
 
 .presentation {
   position: absolute;
   width: 100%;
-
-  color: rgb(64, 64, 64);
-
-  span {
-    display: flex;
-    font-family: Munken;
-    gap: 10px;
-    .one {
-      color: var(--primary-color);
-    }
-    .two {
-      color: var(--secondary-color);
-    }
-  }
 
   .call {
     /* text-transform: uppercase; */
@@ -66,9 +64,13 @@ main {
 
     width: 100%;
     color: rgb(64, 64, 64);
-    color: var(--secondary-color);
+    color: var(--text-color);
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+    transform: skewX(-15deg);
+    /* color: var(--secondary-color); */
 
-    background-color: var(--primary-color);
+    /*    background-color: white; */
   }
 }
 h1 {
@@ -82,6 +84,7 @@ h1 {
   grid-template-columns: min-content max-content;
   place-items: center;
   place-content: center;
+  color: var(--text-color);
 
   cursor: pointer;
 
@@ -130,7 +133,7 @@ h1 {
   display: grid;
   width: 100%;
   height: 100%;
-  background-color: red;
+  background-color: var(--primary-color);
 
   /*  grid-template-columns: 1fr 1fr; */
 
@@ -143,14 +146,24 @@ h1 {
     place-items: center;
     width: 100%;
     height: 100%;
-    background-color: var(--secondary-color);
+    /*    background-color: var(--secondary-color); */
+    .secondary-title {
+      font-family: Stanley;
+      font-family: Abril Fatface;
+    }
   }
   .perso {
     display: grid;
     place-items: center;
     width: 100%;
     height: 100%;
-    background-color: var(--primary-color);
+    /*  background-color: var(--primary-color); */
+    .main-title {
+    }
+    .secondary-title {
+      font-family: Abril Fatface;
+      font-family: Stanley;
+    }
   }
 }
 
